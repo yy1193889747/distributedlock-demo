@@ -69,7 +69,6 @@ public class DistributedLock {
                 }
             }, "t" + i).start();
         }
-
         countdown.countDown();
     }
 }
