@@ -54,7 +54,6 @@ public class DistributedLock {
                         lock.acquire();
                         //-------------业务处理开始
                         genarNo();
-                        Thread.sleep(10000);
 
                         //-------------业务处理结束
                     } catch (Exception e) {
@@ -69,7 +68,6 @@ public class DistributedLock {
                     }
                 }
             }, "t" + i).start();
-            Thread.sleep(5000);
         }
         countdown.countDown();
     }
